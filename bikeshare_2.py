@@ -34,12 +34,11 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-      month = input("\nWhich month would you like to filter by? January, February, March, April, May, June or type 'all' if you do not have any preference?\n").strip().title()
-      if month not in all_months:#('January', 'February', 'March', 'April', 'May', 'June', 'all'):
-        print("You can only enter months between January to June!!!")
-        continue
-      else:
-        break
+        month = input("\nWhich month would you like to filter by? (January, February, March, April, May, June, or type 'all')\n").strip().title()
+        if month in all_months:
+            break
+        else:
+            print("You can only enter months between January to June!")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
