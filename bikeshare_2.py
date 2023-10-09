@@ -43,12 +43,11 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
     while True:
-      day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n").strip().title()
-      if day not in days:# ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'all'):
-        print("Please check to make sure you entered the correct day of the week.")
-        continue
-      else:
-        break
+        day = input("\nAre you looking for a particular day? If so, enter the day (e.g., Sunday, Monday) or type 'all' for no preference.\n").strip().title()
+        if day in days:
+            break
+        else:
+            print("Please make sure you entered the correct day of the week.")
 
 
 
