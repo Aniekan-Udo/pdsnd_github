@@ -36,7 +36,7 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
       month = input("\nWhich month would you like to filter by? January, February, March, April, May, June or type 'all' if you do not have any preference?\n").strip().title()
-      if month not in all_months:#('January', 'February', 'March', 'April', 'May', 'June', 'all'):
+      if month not in all_months:
         print("You can only enter months between January to June!!!")
         continue
       else:
@@ -78,6 +78,7 @@ def load_data(city, month, day):
 
     # extract month, day and hour of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
+    # extract day of week 
     df['day-of-week'] = df['Start Time'].dt.day_name()
     df['hour'] = df['Start Time'].dt.hour
 
