@@ -24,12 +24,11 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input("\nWhich city would you like to filter by? new york city, chicago or washington?\n").title()
-        if city not in CITY_DATA.keys():
-            print("You did not enter the correct city name. Please try again!.")
-            continue
-        else:
+        city = input("\nWhich city would you like to filter by? (New York City, Chicago, Washington)\n").title()
+        if city in CITY_DATA:
             break
+        else:
+            print("You did not enter a correct city name. Please try again!")
 
 
 
